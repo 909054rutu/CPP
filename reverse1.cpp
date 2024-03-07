@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-int d,n,r=0,n1;
+int d,n,r=0;
 cout<<"enter no:";
 cin>>n;
 while(n>0)
@@ -12,6 +12,6 @@ while(n>0)
                n=n/10;
                
 }
-if(n1==n)
+
 cout<<"---="<<r;
 }
