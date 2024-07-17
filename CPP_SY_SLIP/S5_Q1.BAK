@@ -1,0 +1,25 @@
+#include<conio.h>
+#include<iostream.h>
+
+class point
+{
+ int x,y;
+void setpoint(int a,int b)
+{
+x=a;
+y=b;
+}
+void showpoint()
+{
+cout<<"("<<x","<<y")" ";
+}
+};
+int main()
+{
+int x,y;
+point p;
+p.setpoint();
+p.showpoint();
+getch();
+ertrun 0;
+}

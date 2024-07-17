@@ -1,0 +1,35 @@
+#include<conio.h>
+#include<iostream.h>
+class date
+{
+public:
+int dd,mm,yy;
+date()
+{
+dd=1;
+mm=7;
+yy=9;
+}
+date(int dd,int mm,int yy)
+{
+this->dd=dd;
+this->mm=mm;
+this->yy=yy;
+}
+void disp()
+{
+if(mm==1)
+cout<<"\n date="<<dd<<"-jan-"<<yy;
+if(mm==2)
+cout<<"date="<<dd<<"/feb/"<<yy;
+}
+};
+void main()
+{
+clrscr();
+date ob;
+ob.disp();
+date ob1(33,1,2300);
+ob1.disp();
+getch();
+}

@@ -1,0 +1,22 @@
+#include<iostream.h>
+#include<conio.h>
+class number
+{
+	       public:
+
+	       static void disp()
+	       {
+			     static int cnt;
+			      cnt++;
+			      cout<<"count="<<cnt;
+	       }
+};
+int main()
+{                       clrscr();
+	       number ob,ob1,ob2;
+	       ob.disp();
+	       ob1.disp();
+	       ob2.disp();
+	       getch();
+	       return 0;
+}

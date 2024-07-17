@@ -1,0 +1,62 @@
+#include<iostream.h>
+#include<conio.h>
+class square
+{
+public:
+int s;
+void accept()
+{
+cout<<"\n enter side of square";
+cin>>s;
+}
+int cal_s()
+{
+return (s*s);
+}
+friend void comp(int s,int r)
+};
+
+class rect
+{
+public:
+int l,w;
+void disp()
+{
+cout<<"\n enter lenght width";
+cin>>l>>w;
+}
+int cal_r()
+{
+return (l*w);
+}
+friend void comp(int s,int r)
+};
+void comp(int s,int r)
+{
+if(s>r)
+{
+cout<<"area of square is greater";
+}
+else
+{
+cout<<"area of rec greater";
+}
+}
+	    int main()
+	    {
+	    clrscr();
+	    int area_s,area_r;
+	    square s1;
+	    rect r1;
+	    s1.accept();
+	    area_s=s1.cal_s();
+	    r1.disp();
+	    area_r=r1.cal_r();
+
+	    cout<<area_s<<endl;
+	    cout<<area_r<<endl;
+	    comp(area_s,area_r);
+	    getch();
+	    return 0;
+	    }
+

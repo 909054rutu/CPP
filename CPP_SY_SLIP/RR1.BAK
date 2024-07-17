@@ -1,0 +1,76 @@
+#include<stdio.h>
+#include<conio.h>
+struct node{
+int data;
+struct node *next;
+};
+struct node *top;
+void init()
+{
+top=NULL;
+}
+void push(int num)
+{
+struct node *temp,*newnode;
+newnode=(struct node*)malloc(sizeof(struct node));
+newnode->data=num;
+newnode->next=top;
+top=newnode;
+printf("\n push succesfully....");
+}
+int isempty()
+{
+if(top==NULL)
+return 1;
+else
+return 0;
+}
+int deletee()
+{
+int val;
+struct node *temp;
+if(isempty())
+{
+printf("\n is empty ");
+return 0;
+}
+else
+{
+temp=top;
+val=temp->data;
+top=top->next;
+free(temp);
+}
+return val;
+}
+void disp()
+{
+struct node *temp;
+for(temp=top;temp!=NULL;temp=temp->next)
+{
+printf("%d",temp->data);
+}
+}
+int main()
+{
+int num,ch;
+init();
+do
+{
+printf("\n 1-push\n2-delete\n3-disp");
+scanf("%d",&ch);
+switch(ch)
+{
+case 1:printf("enter limit");
+sacnf("%d",&num);
+push(num);
+break;
+case 2:printf("\n delete=%d",deletee());
+break;
+case 3:disp();
+break;
+}
+}while(ch<4);
+getch();
+return 0;
+}
